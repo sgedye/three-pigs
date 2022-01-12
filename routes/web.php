@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get("/", "PagesController@index");
 
-Route::get('/welcome', function () {
-    return view('welcome');
+Route::get("/dashboard", "DashboardController@index")->name("dashboard");
+
+Route::get("/register", "RegisterController@index")->name("register");
+Route::post("/register", "RegisterController@store");
+
+Route::get("/welcome", function () {
+    return view("welcome");
 });
 

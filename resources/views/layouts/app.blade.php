@@ -7,6 +7,15 @@
   <link  rel="stylesheet" href="{{ asset('css/app.css')}}">
 </head>
 <body>
+  <header>
+    <ul class="flex">
+      <li>
+        <a href="{{ route('register') }}">Register</a>
+      </li>
+    </ul>
+  </header>
+
+
   @yield("content")
 </body>
 </html>
